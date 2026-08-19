@@ -85,13 +85,16 @@ export function Gate() {
         />
       </div>
 
-      {/* ---- Centre wordmark + intro line ---- */}
-      <div className="pointer-events-none absolute inset-0 z-10 hidden items-center justify-center md:flex">
+      {/* ---- Wordmark ----
+          Sits in the upper band, not dead centre: the panel headings are
+          bottom-aligned, and a centred mega-wordmark lands right on top of
+          them. Up here it fills the empty head of the page instead. */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 hidden h-[58%] items-center justify-center md:flex">
         <motion.h1
-          className="display select-none text-center text-[length:var(--text-mega)] leading-none tracking-[-0.04em] text-[var(--color-bone)]"
+          className="display select-none text-center text-[length:var(--text-6xl)] leading-none tracking-[-0.04em] text-[var(--color-bone)]"
           style={{ mixBlendMode: "overlay" }}
           initial={{ opacity: 0, scale: 1.06 }}
-          animate={{ opacity: hover ? 0.12 : 0.9, scale: 1 }}
+          animate={{ opacity: hover ? 0.16 : 0.85, scale: 1 }}
           transition={{ duration: 1.2, ease: EASE }}
         >
           {site.wordmark}
@@ -159,7 +162,7 @@ function Panel({
       {/* Texture layer */}
       <motion.div
         className="absolute inset-0"
-        animate={{ opacity: active ? 1 : dimmed ? 0.18 : 0.45 }}
+        animate={{ opacity: active ? 1 : dimmed ? 0.22 : 0.6 }}
         transition={{ duration: 0.7, ease: EASE }}
       >
         {isMusic ? (

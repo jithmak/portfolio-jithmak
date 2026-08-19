@@ -7,7 +7,11 @@
    no chart library, no bundle cost. Pick a `type` and supply `series`.
    ========================================================================= */
 
-export type ChartType = "line" | "bar" | "area" | "donut";
+/**
+ * Chart forms. Deliberately no pie/donut: they are unreliable for comparing
+ * close values, and every part-to-whole story here reads better as a bar.
+ */
+export type ChartType = "line" | "bar" | "area";
 
 export interface CaseChart {
   type: ChartType;
