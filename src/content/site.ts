@@ -4,8 +4,8 @@
    ========================================================================= */
 
 export const site = {
-  /** TODO: your full name as you want it printed. */
-  name: "Jithma Kalhara",
+  /** Your full name as you want it printed on the site. */
+  name: "Jithma Kamburugamuwa",
   /** Short wordmark used in the nav and the landing gate. */
   wordmark: "JITHMA",
   /** Appears in <title> and OG tags. */
